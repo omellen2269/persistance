@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    let userDefalts = UserDefaults.standard
+    let number = 287
+    
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        userDefalts.set(number, forKey: "myNumber")
+        
+        let numberBack = userDefalts.integer(forKey: "myNumber")
+        print(numberBack)
     }
 
+    
 
 }
 
